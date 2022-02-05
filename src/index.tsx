@@ -3,6 +3,7 @@ import BallTriangle from './loader/BallTriangle'
 import Bars from './loader/Bars'
 import Circles from './loader/Circles'
 import CirclesWithBar from './loader/CirclesWithBar'
+import CoffeeCup from './loader/CoffeeCup'
 import CradleLoader from './loader/CradleLoader'
 import Grid from './loader/Grid'
 import Hearts from './loader/Hearts'
@@ -27,6 +28,7 @@ export {
   CradleLoader,
   Circles,
   CirclesWithBar,
+  CoffeeCup,
   Grid,
   Hearts,
   LineWave,
