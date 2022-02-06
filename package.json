@@ -10,11 +10,7 @@
     ".": {
       "require": "./dist/index.js",
       "import": "./dist/esm/index.js"
-    },
-    "./dist/loader/css/react-spinner-loader.css": "./dist/loader/css/react-spinner-loader.css",
-    "./dist/loader/css/cradleLoader.css": "./dist/loader/css/cradleLoader.css",
-    "./dist/loader/css/plane.css": "./dist/loader/css/plane.css",
-    "./dist/loader/css/triangle.css": "./dist/loader/css/triangle.css"
+    }
   },
   "types": "dist/index.d.ts",
   "author": {
@@ -75,7 +71,6 @@
     "react-dom": "16.8.0",
     "rimraf": "^3.0.2",
     "ts-jest": "^27.1.2",
-    "ttypescript": "^1.5.13",
     "typescript": "^4.5.4",
     "typescript-plugin-styled-components": "^2.0.0"
   },
@@ -83,7 +78,6 @@
     "react": "^16.0.0 || ^17.0.0",
     "react-dom": "^16.0.0 || ^17.0.0"
   },
-  "packageManager": "yarn@3.1.1",
   "dependencies": {
     "styled-components": "^5.3.3",
     "styled-tools": "^1.7.2"
