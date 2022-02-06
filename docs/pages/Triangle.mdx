@@ -5,25 +5,20 @@ menu: Loaders
 ---
 
 import { Playground, Props } from 'docz'
-import { Triangle, CoffeeCup } from '../lib/index.tsx'
+import { Triangle } from '../lib/index.tsx'
 import '../lib/loader/css/react-spinner-loader.css'
 
 ## Example
 
 <Playground>
-  <CoffeeCup ariaLabel="loading-indicator" 
-  visible={true} 
-  wrapperStyle={{barckgroundColor:'green'}}
-  scale={2}
-   />
-  
+  <Triangle ariaLabel="loading-indicator" />
 </Playground>
 
 > To use this spinner you need to import css from the packages
+
 ```jsx
 import '../lib/loader/css/react-spinner-loader.css'
 ```
-
 
 ## Props
 
