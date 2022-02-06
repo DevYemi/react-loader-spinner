@@ -13,6 +13,7 @@ import Plane from './loader/Plane'
 import Puff from './loader/Puff'
 import RevolvingDot from './loader/RevolvingDot'
 import Rings from './loader/Rings'
+import RotatingLines from './loader/RotatingLines'
 import RotatingSquare from './loader/RotatingSquare'
 import TailSpin from './loader/TailSpin'
 import ThreeCircles from './loader/ThreeCircles'
@@ -41,5 +42,6 @@ export {
   ThreeDots,
   ThreeCircles,
   Triangle,
-  Watch
+  Watch,
+  RotatingLines,
 }

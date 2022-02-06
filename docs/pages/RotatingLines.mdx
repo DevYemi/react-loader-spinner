@@ -1,0 +1,53 @@
+---
+name: Rotating Lines
+route: /rotating-lines
+menu: Loaders
+---
+
+import { Playground, Props } from 'docz'
+
+import { RotatingLines } from '../lib/index.tsx'
+
+## Rotating Lines
+
+<Playground>
+  <RotatingLines
+    width="100"
+  />
+</Playground>
+
+<div style={{height:"100px"}}></div>
+
+<Playground>
+  <RotatingLines
+    width="100"
+    strokeColor="#FF5733"
+  />
+</Playground>
+
+<div style={{height:"100px"}}></div>
+
+<Playground>
+  <RotatingLines
+    width="100"
+    strokeColor="#FF5733"
+    strokeWidth='1'
+  />
+</Playground>
+
+<div style={{height:"100px"}}></div>
+
+<Playground>
+  <RotatingLines
+    width="100"
+    strokeColor="#6495ED"
+    strokeWidth='1'
+    animationDuration='3'
+  />
+</Playground>
+
+> Higher the speed slower it moves. Its actually the animation duration
+
+## Props
+
+<Props of={RotatingLines} />

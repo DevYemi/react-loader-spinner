@@ -85,6 +85,7 @@
   },
   "packageManager": "yarn@3.1.1",
   "dependencies": {
-    "styled-components": "^5.3.3"
+    "styled-components": "^5.3.3",
+    "styled-tools": "^1.7.2"
   }
 }
