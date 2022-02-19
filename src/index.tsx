@@ -3,8 +3,10 @@ import BallTriangle from './loader/BallTriangle'
 import Bars from './loader/Bars'
 import Circles from './loader/Circles'
 import CirclesWithBar from './loader/CirclesWithBar'
+import FallingLines from './loader/FallingLines'
 import Grid from './loader/Grid'
 import Hearts from './loader/Hearts'
+import InfinitySpin from './loader/InfinitySpin'
 import LineWave from './loader/LineWave'
 import MutatingDots from './loader/MutatingDots'
 import Oval from './loader/Oval'
@@ -42,4 +44,6 @@ export {
   Triangle,
   Watch,
   RotatingLines,
+  FallingLines,
+  InfinitySpin,
 }
