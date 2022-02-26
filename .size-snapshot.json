@@ -58,13 +58,13 @@
     }
   },
   "react-loader-spinner.umd.development.js": {
-    "bundled": 136426,
-    "minified": 82757,
-    "gzipped": 23288
+    "bundled": 146209,
+    "minified": 86075,
+    "gzipped": 24202
   },
   "react-loader-spinner.umd.production.js": {
-    "bundled": 126790,
-    "minified": 76942,
-    "gzipped": 20963
+    "bundled": 131465,
+    "minified": 79234,
+    "gzipped": 21544
   }
 }
