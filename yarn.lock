@@ -13286,6 +13286,15 @@ react-live@^2.2.1:
     react-simple-code-editor "^0.11.0"
     unescape "^1.0.1"
 
+react-loader-spinner@5.1.5-0:
+  version "5.1.5-0"
+  resolved "https://registry.yarnpkg.com/react-loader-spinner/-/react-loader-spinner-5.1.5-0.tgz#8e286a95188b9083f15a231015003713e2763388"
+  integrity sha512-I51kuw79ODbzpZKNh0tgp1PZEiLIpwdPEAdL6OJDJq9Cl7aZsDm61hcmua0MLkxsmEvafIPXe0Gr9aarLcRG6g==
+  dependencies:
+    styled-components "^5.3.3"
+    styled-tools "^1.7.2"
+    ttypescript "^1.5.13"
+
 react-refresh@^0.8.3:
   version "0.8.3"
   resolved "https://registry.yarnpkg.com/react-refresh/-/react-refresh-0.8.3.tgz#721d4657672d400c5e3c75d063c4a85fb2d5d68f"

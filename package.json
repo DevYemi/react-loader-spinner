@@ -79,6 +79,7 @@
     "react-dom": "^16.0.0 || ^17.0.0"
   },
   "dependencies": {
+    "react-loader-spinner": "5.1.5-0",
     "styled-components": "^5.3.3",
     "styled-tools": "^1.7.2"
   }
