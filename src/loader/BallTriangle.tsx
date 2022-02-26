@@ -2,11 +2,11 @@ import React, { FunctionComponent } from 'react'
 import { BaseProps, Style } from '../type'
 
 interface BallTriangleProps extends BaseProps {
-  radius?: string | number,
+  radius?: string | number
 }
 
 const getDefaultStyle = (visible: boolean): Style => ({
-  display: visible ? 'flex' : 'none'
+  display: visible ? 'flex' : 'none',
 })
 
 const BallTriangle: FunctionComponent<BallTriangleProps> = ({
@@ -17,10 +17,13 @@ const BallTriangle: FunctionComponent<BallTriangleProps> = ({
   ariaLabel = 'ball-triangle-loading',
   wrapperClass,
   wrapperStyle,
-  visible = true
-
-}) => (
-  <div style={{ ...getDefaultStyle(visible), ...wrapperStyle }} className={wrapperClass} data-testid="ball-triangle-loading">
+  visible = true,
+}: BallTriangleProps) => (
+  <div
+    style={{ ...getDefaultStyle(visible), ...wrapperStyle }}
+    className={wrapperClass}
+    data-testid="ball-triangle-loading"
+  >
     <svg
       height={height}
       width={width}

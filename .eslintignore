@@ -1,2 +1,5 @@
-dist
-README.md
+compiled/
+coverage/
+dist/
+node_modules/*
+docs/

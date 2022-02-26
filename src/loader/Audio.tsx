@@ -1,22 +1,26 @@
-import React, { FunctionComponent, ReactElement } from 'react'
+import React, { ReactElement } from 'react'
 import { BaseProps, Style } from '../type'
 
-interface AudioProps extends BaseProps { }
+type AudioProps = BaseProps
 
 const getDefaultStyle = (visible: boolean): Style => ({
-  display: visible ? 'flex' : 'none'
+  display: visible ? 'flex' : 'none',
 })
 
-const Audio: FunctionComponent<AudioProps> = ({
+const Audio: React.FC<AudioProps> = ({
   height = '100',
   width = '100',
   color = 'blue',
   ariaLabel = 'audio-loading',
   wrapperStyle = {},
   wrapperClass,
-  visible = true
-}): ReactElement => (
-  <div style={{ ...getDefaultStyle(visible), ...wrapperStyle }} className={wrapperClass} data-testid="audio-loading">
+  visible = true,
+}: AudioProps): ReactElement => (
+  <div
+    style={{ ...getDefaultStyle(visible), ...wrapperStyle }}
+    className={wrapperClass}
+    data-testid="audio-loading"
+  >
     <svg
       height={`${height}`}
       width={`${width}`}

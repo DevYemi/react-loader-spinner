@@ -1,5 +1,5 @@
 import React from 'react'
-import ThreeDots from '../../src/loader/ThreeDots'
+import { ThreeDots } from '../../src'
 import { render, screen } from '@testing-library/react'
 
 const wrapperTestId = 'three-dots-loading'
@@ -7,7 +7,9 @@ const svgTestId = 'three-dots-svg'
 
 describe('Three Dots Loader', () => {
   test('should be importable correctly', () => {
-    const component = render(<ThreeDots height={100} color={'red'} width={100} />)
+    const component = render(
+      <ThreeDots height={100} color={'red'} width={100} />
+    )
     expect(component).toBeDefined()
   })
 

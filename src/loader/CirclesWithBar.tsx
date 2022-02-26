@@ -2,13 +2,13 @@ import React from 'react'
 import { Style } from '../type'
 
 type Props = {
-  wrapperStyle?: Style,
-  visible?: boolean,
-  wrapperClass?: string,
-  height?: string | number,
-  width?: string | number,
-  color?: string,
-  outerCircleColor?: string,
+  wrapperStyle?: Style
+  visible?: boolean
+  wrapperClass?: string
+  height?: string | number
+  width?: string | number
+  color?: string
+  outerCircleColor?: string
   innerCircleColor?: string
   barColor?: string
 }
@@ -31,14 +31,16 @@ const CirclesWithBar: React.FunctionComponent<Props> = ({
   color = 'red',
   outerCircleColor,
   innerCircleColor,
-  barColor
-}): React.ReactElement => {
+  barColor,
+}: Props): React.ReactElement => {
   return (
     <div
       style={{ ...getDefaultStyle(visible), ...wrapperStyle }}
       className={wrapperClass}
-      data-testid="circles-with-bar-wrapper">
-      <svg version="1.1"
+      data-testid="circles-with-bar-wrapper"
+    >
+      <svg
+        version="1.1"
         id="L1"
         xmlns="http://www.w3.org/2000/svg"
         x="0px"
@@ -50,12 +52,15 @@ const CirclesWithBar: React.FunctionComponent<Props> = ({
         xmlSpace="preserve"
         data-testid="circles-with-bar-svg"
       >
-        <circle fill="none"
+        <circle
+          fill="none"
           stroke={`${outerCircleColor || color}`} // color
           strokeWidth="6"
           strokeMiterlimit="15"
           strokeDasharray="14.2472,14.2472"
-          cx="50" cy="50" r="47"
+          cx="50"
+          cy="50"
+          r="47"
           data-testid="circles-with-bar-svg-outer-circle"
         >
           <animateTransform
@@ -65,13 +70,18 @@ const CirclesWithBar: React.FunctionComponent<Props> = ({
             dur="5s"
             from="0 50 50"
             to="360 50 50"
-            repeatCount="indefinite" />
+            repeatCount="indefinite"
+          />
         </circle>
-        <circle fill="none"
+        <circle
+          fill="none"
           stroke={`${innerCircleColor || color}`}
           strokeWidth="1"
           strokeMiterlimit="10"
-          strokeDasharray="10,10" cx="50" cy="50" r="39"
+          strokeDasharray="10,10"
+          cx="50"
+          cy="50"
+          r="39"
           data-testid="circles-with-bar-svg-inner-circle"
         >
           <animateTransform
@@ -81,12 +91,10 @@ const CirclesWithBar: React.FunctionComponent<Props> = ({
             dur="5s"
             from="0 50 50"
             to="-360 50 50"
-            repeatCount="indefinite" />
+            repeatCount="indefinite"
+          />
         </circle>
-        <g
-          fill={`${barColor || color}`}
-          data-testid="circles-with-bar-svg-bar"
-        >
+        <g fill={`${barColor || color}`} data-testid="circles-with-bar-svg-bar">
           <rect x="30" y="35" width="5" height="30">
             <animateTransform
               attributeName="transform"
@@ -94,43 +102,48 @@ const CirclesWithBar: React.FunctionComponent<Props> = ({
               type="translate"
               values="0 5 ; 0 -5; 0 5"
               repeatCount="indefinite"
-              begin="0.1" />
+              begin="0.1"
+            />
           </rect>
-          <rect x="40" y="35" width="5" height="30" >
+          <rect x="40" y="35" width="5" height="30">
             <animateTransform
               attributeName="transform"
               dur="1s"
               type="translate"
               values="0 5 ; 0 -5; 0 5"
               repeatCount="indefinite"
-              begin="0.2" />
+              begin="0.2"
+            />
           </rect>
-          <rect x="50" y="35" width="5" height="30" >
+          <rect x="50" y="35" width="5" height="30">
             <animateTransform
               attributeName="transform"
               dur="1s"
               type="translate"
               values="0 5 ; 0 -5; 0 5"
               repeatCount="indefinite"
-              begin="0.3" />
+              begin="0.3"
+            />
           </rect>
-          <rect x="60" y="35" width="5" height="30" >
+          <rect x="60" y="35" width="5" height="30">
             <animateTransform
               attributeName="transform"
               dur="1s"
               type="translate"
               values="0 5 ; 0 -5; 0 5"
               repeatCount="indefinite"
-              begin="0.4" />
+              begin="0.4"
+            />
           </rect>
-          <rect x="70" y="35" width="5" height="30" >
+          <rect x="70" y="35" width="5" height="30">
             <animateTransform
               attributeName="transform"
               dur="1s"
               type="translate"
               values="0 5 ; 0 -5; 0 5"
               repeatCount="indefinite"
-              begin="0.5" />
+              begin="0.5"
+            />
           </rect>
         </g>
       </svg>

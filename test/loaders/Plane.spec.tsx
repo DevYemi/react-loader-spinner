@@ -1,5 +1,5 @@
 import React from 'react'
-import Plane from '../../src/loader/Plane'
+import { Plane } from '../../src'
 import { render, screen } from '@testing-library/react'
 
 const wrapperTestId = 'plane-loading'

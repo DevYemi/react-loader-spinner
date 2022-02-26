@@ -2,39 +2,39 @@ import React from 'react'
 import { Style } from '../type'
 
 type RotatingSquareProps = {
-  style?: Style,
-  wrapperClass?: '',
-  color?: string,
-  strokeWidth?: string | number,
-  height?: string | number,
-  width?: string | number,
-  ariaLabel?: string,
-  wrapperStyle?: Style,
+  style?: Style
+  wrapperClass?: ''
+  color?: string
+  strokeWidth?: string | number
+  height?: string | number
+  width?: string | number
+  ariaLabel?: string
+  wrapperStyle?: Style
   visible?: boolean
 }
 
 const getDefaultStyle = (visible: boolean): Style => ({
-  display: visible ? 'flex' : 'none'
+  display: visible ? 'flex' : 'none',
 })
 
 const RotatingSquare: React.FunctionComponent<RotatingSquareProps> = ({
-  style = {},
   wrapperClass = '',
   color = 'red',
-  strokeWidth: number,
   height = 100,
   width = 100,
   strokeWidth = 4,
   ariaLabel = 'rotating-square-loading',
   wrapperStyle = {},
-  visible = true
-}): React.ReactElement => {
+  visible = true,
+}: RotatingSquareProps): React.ReactElement => {
   return (
     <div
       style={{ ...getDefaultStyle(visible), ...wrapperStyle }}
       className={wrapperClass}
-      data-testid="rotating-square-wrapper">
-      <svg version="1.1"
+      data-testid="rotating-square-wrapper"
+    >
+      <svg
+        version="1.1"
         xmlns="http://www.w3.org/2000/svg"
         x="0px"
         y="0px"
@@ -44,7 +44,8 @@ const RotatingSquare: React.FunctionComponent<RotatingSquareProps> = ({
         width={`${width}`}
         aria-label={ariaLabel}
         data-testid="rotating-square-svg"
-        xmlSpace="preserve">
+        xmlSpace="preserve"
+      >
         <rect
           fill="none"
           stroke={color}
@@ -52,7 +53,8 @@ const RotatingSquare: React.FunctionComponent<RotatingSquareProps> = ({
           x="25"
           y="25"
           width="50"
-          height="50">
+          height="50"
+        >
           <animateTransform
             attributeName="transform"
             dur="0.5s"
@@ -61,7 +63,8 @@ const RotatingSquare: React.FunctionComponent<RotatingSquareProps> = ({
             type="rotate"
             id="strokeBox"
             attributeType="XML"
-            begin="rectBox.end" />
+            begin="rectBox.end"
+          />
         </rect>
         <rect x="27" y="27" fill={color} width="46" height="50">
           <animate
@@ -72,7 +75,8 @@ const RotatingSquare: React.FunctionComponent<RotatingSquareProps> = ({
             to="0"
             id="rectBox"
             fill="freeze"
-            begin="0s;strokeBox.end" />
+            begin="0s;strokeBox.end"
+          />
         </rect>
       </svg>
     </div>

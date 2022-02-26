@@ -2,8 +2,8 @@ import React from 'react'
 import styled, { keyframes } from 'styled-components'
 
 type Props = {
-  color: string,
-  width:string,
+  color: string
+  width: string
 }
 
 const len = 242.776657104492
@@ -32,14 +32,14 @@ const Path = styled.path`
 
 const InfinitySpin = ({
   color = '#f28f3b',
-  width = '200'
-}: Props) => {
+  width = '200',
+}: Props): JSX.Element => {
   return (
     <svg
-    xmlns="http://www.w3.org/2000/svg"
-    width={`${width}`}
-    height={`${Number(width) * 0.5}`}
-    viewBox={`0 0 ${width} ${Number(200 * 0.5)}`}
+      xmlns="http://www.w3.org/2000/svg"
+      width={`${width}`}
+      height={`${Number(width) * 0.5}`}
+      viewBox={`0 0 ${width} ${Number(200 * 0.5)}`}
     >
       <Path
         stroke={color}

@@ -1,5 +1,5 @@
 import React from 'react'
-import Hearts from '../../src/loader/Hearts'
+import { Hearts } from '../../src'
 import { render, screen } from '@testing-library/react'
 
 const wrapperTestId = 'hearts-loading'

@@ -20,12 +20,12 @@ describe('Rotating Lines Loader', () => {
   test('should have a correct attributes', () => {
     render(
       <RotatingLines
-        strokeColor='red'
-        strokeWidth='1'
-        animationDuration='0.2'
-        width='50'
+        strokeColor="red"
+        strokeWidth="1"
+        animationDuration="0.2"
+        width="50"
         visible={true}
-      />,
+      />
     )
     const element = screen.getByTestId(svgTestId)
     expect(element).toHaveAttribute('stroke')

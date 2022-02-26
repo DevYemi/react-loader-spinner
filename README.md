@@ -1,60 +1,72 @@
-![Node.js Package](https://github.com/mhnpd/react-loader-spinner/workflows/Node.js%20Package/badge.svg?branch=master)
-![release](https://badgen.net/github/release/mhnpd/react-loader-spinner)
-![tag](https://badgen.net/github/tag/mhnpd/react-loader-spinner)
-![stars](https://badgen.net/github/stars/mhnpd/react-loader-spinner)
-![issue](https://badgen.net/github/issues/mhnpd/react-loader-spinner)
-![open-issues](https://badgen.net/github/open-issues/mhnpd/react-loader-spinner)
-![commits](https://badgen.net/github/commits/mhnpd/react-loader-spinner)
-![commits](https://badgen.net/github/assets-dl/mhnpd/react-loader-spinner)
+# react-loader-spinner
 
-<div style="text-align:center;">
-<p>
-  <img src="/logo/logo.png" alt="title"/>
-</p>
-</div>
+[![npm version][npmv-image]][npmv-url]
+[![build status][build-image]][build-url]
+[![coverage status][codecov-image]][codecov-url]
+[![npm downloads][npmd-image]][npmd-url]
 
-`react-spinner-loader` provides simple React SVG spinner component which can be implemented for async await operation before data loads to the view.
+> 
 
-### Installation
+## Basic Usage
 
-```sh
+```jsx
+import React from 'react'
+import { render } from 'react-dom'
+
+render(, document.getElementById('root'))
+```
+
+## Live Examples
+
+- [Basic Usage](https://codesandbox.io/)
+- [API Example](https://codesandbox.io/)
+- [UMD Build (Development)](https://codesandbox.io/)
+- [UMD Build (Production)](https://codesandbox.io/)
+
+## API
+
+**Props**
+
+- `foo` - Something something.
+- `bar` - _Optional_ Something something. Defaults to `null`.
+
+**Example**
+
+```jsx
+
+```
+
+## Installation
+
+```
 $ npm install react-loader-spinner --save
-# or
-yarn add react-loader-spinner
 ```
 
-# Documentation:
+There are also UMD builds available via [unpkg](https://unpkg.com/):
 
-[DEMO](https://mhnpd.github.io/react-loader-spinner-example/)
+- https://unpkg.com/react-loader-spinner/dist/react-loader-spinner.umd.development.js
+- https://unpkg.com/react-loader-spinner/dist/react-loader-spinner.umd.production.js
 
-# Code SandBox:
+For the non-minified development version, make sure you have already included:
 
-https://codesandbox.io/s/react-loader-spinner-weqls?file=/src/App.js
+- [`React`](https://unpkg.com/react/umd/react.development.js)
+- [`ReactDOM`](https://unpkg.com/react-dom/umd/react-dom.development.js)
+- [`PropTypes`](https://unpkg.com/prop-types/prop-types.js)
 
-### Usage
+For the minified production version, make sure you have already included:
 
-##### Import required css
-
-Import the css to main app.js file
-
-<Audio
-    height="100"
-    width="100"
-    color='grey'
-    ariaLabel='loading'
-  />
-
-```
-
-### Types of Spinner
-
-![alt text](https://user-images.githubusercontent.com/33191954/148691173-a825d830-9457-4174-9b74-5c2a264906e4.gif)
-
-### Here are the list of the task for which we want PR:
-
-- Rings spinner is not supported in Safari
+- [`React`](https://unpkg.com/react/umd/react.production.min.js)
+- [`ReactDOM`](https://unpkg.com/react-dom/umd/react-dom.production.min.js)
 
 ## License
 
 MIT
-```
+
+[build-image]: https://img.shields.io/github/workflow/status/mhnpd/react-loader-spinner/CI?style=flat-square
+[build-url]: https://github.com/mhnpd/react-loader-spinner/actions?query=workflow%3ACI
+[codecov-image]: https://img.shields.io/codecov/c/github/mhnpd/react-loader-spinner.svg?style=flat-square
+[codecov-url]: https://codecov.io/gh/mhnpd/react-loader-spinner
+[npmv-image]: https://img.shields.io/npm/v/react-loader-spinner.svg?style=flat-square
+[npmv-url]: https://www.npmjs.com/package/react-loader-spinner
+[npmd-image]: https://img.shields.io/npm/dm/react-loader-spinner.svg?style=flat-square
+[npmd-url]: https://www.npmjs.com/package/react-loader-spinner

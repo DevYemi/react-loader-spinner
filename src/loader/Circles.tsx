@@ -1,11 +1,10 @@
 import React, { FunctionComponent, ReactElement } from 'react'
 import { BaseProps, Style } from '../type'
 
-interface CirclesProps extends BaseProps {
-}
+type CirclesProps = BaseProps
 
 const getDefaultStyle = (visible: boolean): Style => ({
-  display: visible ? 'flex' : 'none'
+  display: visible ? 'flex' : 'none',
 })
 
 const Circles: FunctionComponent<CirclesProps> = ({
@@ -15,9 +14,13 @@ const Circles: FunctionComponent<CirclesProps> = ({
   ariaLabel = 'circles-loading',
   wrapperStyle,
   wrapperClass,
-  visible = true
-}): ReactElement => (
-  <div style={{ ...getDefaultStyle(visible), ...wrapperStyle }} className={wrapperClass} data-testid="circles-loading">
+  visible = true,
+}: CirclesProps): ReactElement => (
+  <div
+    style={{ ...getDefaultStyle(visible), ...wrapperStyle }}
+    className={wrapperClass}
+    data-testid="circles-loading"
+  >
     <svg
       width={width}
       height={height}

@@ -1,5 +1,5 @@
 import React from 'react'
-import LineWave from '../../src/loader/LineWave'
+import { LineWave } from '../../src'
 import { render, screen } from '@testing-library/react'
 
 const wrapperTestId = 'line-wave-wrapper'
@@ -10,45 +10,37 @@ const lastLineTestId = 'line-wave-svg-last-line'
 
 describe('Circles With bar Loader', () => {
   test('should be importable correctly', () => {
-    const component = render(<
-      LineWave
-      height={100}
-      color={'red'}
-      width={100} />)
+    const component = render(
+      <LineWave height={100} color={'red'} width={100} />
+    )
     expect(component).toBeDefined()
   })
 
   test('should have a test classes', () => {
-    render(<LineWave
-      height={100}
-      color={'red'}
-      width={100}
-    />)
+    render(<LineWave height={100} color={'red'} width={100} />)
     const element = screen.getByTestId(wrapperTestId)
     expect(element).toBeVisible()
     expect(element).toContainHTML('svg')
   })
   test('should be hidden when visible is false', () => {
-    render(<LineWave
-      height={100}
-      color={'red'}
-      width={100}
-      visible={false}
-    />)
+    render(<LineWave height={100} color={'red'} width={100} visible={false} />)
     const element = screen.getByTestId(wrapperTestId)
     expect(element).not.toBeVisible()
   })
 
   test('should have a correct attributes', () => {
-    render(<LineWave
-      height={120}
-      width={120}
-      color={'red'}
-      middleLineColor='green'
-      lastLineColor='blue'
-      wrapperStyle={{ padding: '10px' }}
-      wrapperClass='testClass'
-      visible={true} />)
+    render(
+      <LineWave
+        height={120}
+        width={120}
+        color={'red'}
+        middleLineColor="green"
+        lastLineColor="blue"
+        wrapperStyle={{ padding: '10px' }}
+        wrapperClass="testClass"
+        visible={true}
+      />
+    )
 
     const wrapperDiv = screen.getByTestId(wrapperTestId)
     const svg = screen.getByTestId(svgTestId)

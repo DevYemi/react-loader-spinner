@@ -1,0 +1,10 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "allowJs": true,
+    "checkJs": true
+  },
+  "include": ["examples", "scripts", "src", "test"],
+  "files": [".eslintrc.js", "index.js", "rollup.config.js"],
+  "exclude": ["node_modules"]
+}

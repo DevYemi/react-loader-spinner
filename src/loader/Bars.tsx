@@ -1,10 +1,10 @@
 import React, { FunctionComponent } from 'react'
 import { BaseProps, Style } from '../type'
 
-interface BarsProps extends BaseProps { }
+type BarsProps = BaseProps
 
 const getDefaultStyle = (visible: boolean): Style => ({
-  display: visible ? 'flex' : 'none'
+  display: visible ? 'flex' : 'none',
 })
 
 const Bars: FunctionComponent<BarsProps> = ({
@@ -14,9 +14,13 @@ const Bars: FunctionComponent<BarsProps> = ({
   ariaLabel = 'bars-loading',
   wrapperStyle,
   wrapperClass,
-  visible = true
-}) => (
-  <div style={{ ...getDefaultStyle(visible), ...wrapperStyle }} className={wrapperClass} data-testid="bars-loading">
+  visible = true,
+}: BarsProps) => (
+  <div
+    style={{ ...getDefaultStyle(visible), ...wrapperStyle }}
+    className={wrapperClass}
+    data-testid="bars-loading"
+  >
     <svg
       width={width}
       height={height}

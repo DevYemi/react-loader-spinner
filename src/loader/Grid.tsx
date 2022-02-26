@@ -2,11 +2,11 @@ import React, { FunctionComponent, ReactElement } from 'react'
 import { BaseProps, Style } from '../type'
 
 interface GridProps extends BaseProps {
-  radius?: string | number,
+  radius?: string | number
 }
 
 const getDefaultStyle = (visible: boolean): Style => ({
-  display: visible ? 'flex' : 'none'
+  display: visible ? 'flex' : 'none',
 })
 
 export const Grid: FunctionComponent<GridProps> = ({
@@ -17,9 +17,13 @@ export const Grid: FunctionComponent<GridProps> = ({
   ariaLabel = 'grid-loading',
   wrapperStyle,
   wrapperClass,
-  visible = true
-}): ReactElement => (
-  <div style={{ ...getDefaultStyle(visible), ...wrapperStyle }} className={wrapperClass} data-testid="grid-loading">
+  visible = true,
+}: GridProps): ReactElement => (
+  <div
+    style={{ ...getDefaultStyle(visible), ...wrapperStyle }}
+    className={wrapperClass}
+    data-testid="grid-loading"
+  >
     <svg
       width={width}
       height={height}

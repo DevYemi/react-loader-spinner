@@ -1,5 +1,5 @@
 import React from 'react'
-import Triangle from '../../src/loader/Triangle'
+import { Triangle } from '../../src/'
 import { render, screen } from '@testing-library/react'
 
 const wrapperTestId = 'triangle-loading'
@@ -7,7 +7,9 @@ const svgTestId = 'triangle-svg'
 
 describe('Triangle Loader', () => {
   test('should be importable correctly', () => {
-    const component = render(<Triangle height={100} color={'red'} width={100} />)
+    const component = render(
+      <Triangle height={100} color={'red'} width={100} />
+    )
     expect(component).toBeDefined()
   })
 

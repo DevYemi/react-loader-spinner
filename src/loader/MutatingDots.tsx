@@ -2,12 +2,12 @@ import React, { FunctionComponent } from 'react'
 import { BaseProps, Style } from '../type'
 
 interface MutatingDotsProps extends BaseProps {
-  radius?: string | number,
-  secondaryColor?: string,
+  radius?: string | number
+  secondaryColor?: string
 }
 
 const getDefaultStyle = (visible: boolean): Style => ({
-  display: visible ? 'flex' : 'none'
+  display: visible ? 'flex' : 'none',
 })
 
 const MutatingDots: FunctionComponent<MutatingDotsProps> = ({
@@ -19,10 +19,20 @@ const MutatingDots: FunctionComponent<MutatingDotsProps> = ({
   ariaLabel = 'mutating-dots-loading',
   wrapperStyle,
   wrapperClass,
-  visible = true
-}) => (
-  <div style={{ ...getDefaultStyle(visible), ...wrapperStyle }} className={wrapperClass} data-testid="mutating-dots-loading">
-    <svg id="goo-loader" width={width} height={height} aria-label={ariaLabel} data-testid="mutating-dots-svg">
+  visible = true,
+}: MutatingDotsProps) => (
+  <div
+    style={{ ...getDefaultStyle(visible), ...wrapperStyle }}
+    className={wrapperClass}
+    data-testid="mutating-dots-loading"
+  >
+    <svg
+      id="goo-loader"
+      width={width}
+      height={height}
+      aria-label={ariaLabel}
+      data-testid="mutating-dots-svg"
+    >
       <filter id="fancy-goo">
         <feGaussianBlur in="SourceGraphic" stdDeviation="6" result="blur" />
         <feColorMatrix
@@ -44,7 +54,7 @@ const MutatingDots: FunctionComponent<MutatingDotsProps> = ({
           dur="1.2s"
           repeatCount="indefinite"
         />
-        <circle cx="50%" cy="40" r={radius} fill={color} >
+        <circle cx="50%" cy="40" r={radius} fill={color}>
           <animate
             id="cAnim1"
             attributeType="XML"

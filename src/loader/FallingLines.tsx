@@ -1,9 +1,9 @@
 import React from 'react'
 
 type Props = {
-  color?: string,
-  width?: string,
-  height?: string,
+  color?: string
+  width?: string
+  height?: string
   visible?: boolean
 }
 
@@ -11,9 +11,8 @@ const FallingLines = ({
   color = 'grey',
   width = '100',
   visible = true,
-}:Props):React.ReactElement | null => {
-  return visible
-    ? (
+}: Props): React.ReactElement | null => {
+  return visible ? (
     <svg
       xmlns="http://www.w3.org/2000/svg"
       width={width}
@@ -93,8 +92,7 @@ const FallingLines = ({
         />
       </rect>
     </svg>
-      )
-    : null
+  ) : null
 }
 
 export default FallingLines

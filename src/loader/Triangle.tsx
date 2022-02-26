@@ -17,7 +17,7 @@ const SVG = styled.svg`
 `
 /** Styles Ends */
 
-interface TriangleProps extends BaseProps {}
+type TriangleProps = BaseProps
 
 const getDefaultStyle = (visible: boolean): Style => ({
   display: visible ? 'flex' : 'none',
@@ -31,7 +31,7 @@ const Triangle: FunctionComponent<TriangleProps> = ({
   wrapperStyle,
   wrapperClass,
   visible = true,
-}) => (
+}: TriangleProps): React.ReactElement => (
   <div
     role="presentation"
     style={{ ...getDefaultStyle(visible), ...wrapperStyle }}

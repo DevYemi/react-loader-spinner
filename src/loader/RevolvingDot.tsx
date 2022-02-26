@@ -2,12 +2,12 @@ import React, { FunctionComponent, ReactElement } from 'react'
 import { BaseProps, Style } from '../type'
 
 interface RevolvingDotProps extends BaseProps {
-  radius?: string | number,
-  secondaryColor?: string,
+  radius?: string | number
+  secondaryColor?: string
 }
 
 const getDefaultStyle = (visible: boolean): Style => ({
-  display: visible ? 'flex' : 'none'
+  display: visible ? 'flex' : 'none',
 })
 const RevolvingDot: FunctionComponent<RevolvingDotProps> = ({
   height = 80,
@@ -17,10 +17,13 @@ const RevolvingDot: FunctionComponent<RevolvingDotProps> = ({
   ariaLabel = 'revolving-dot-loading',
   wrapperStyle,
   wrapperClass,
-  visible = true
-}): ReactElement => (
-  <div style={{ ...getDefaultStyle(visible), ...wrapperStyle }} className={wrapperClass} data-testid="revolving-dot-loading">
-
+  visible = true,
+}: RevolvingDotProps): ReactElement => (
+  <div
+    style={{ ...getDefaultStyle(visible), ...wrapperStyle }}
+    className={wrapperClass}
+    data-testid="revolving-dot-loading"
+  >
     <svg
       version="1.1"
       width={width}
@@ -40,7 +43,14 @@ const RevolvingDot: FunctionComponent<RevolvingDotProps> = ({
         r={Number(`${radius}`) + 38}
         style={{ opacity: 0.5 }}
       />
-      <circle fill={color} stroke={color} strokeWidth="3" cx="8" cy="54" r={radius}>
+      <circle
+        fill={color}
+        stroke={color}
+        strokeWidth="3"
+        cx="8"
+        cy="54"
+        r={radius}
+      >
         <animateTransform
           attributeName="transform"
           dur="2s"

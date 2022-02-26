@@ -36,11 +36,11 @@ const Path = styled.path`
 /** Styles-ends */
 
 interface PlaneProps extends Omit<BaseProps, 'width' | 'height'> {
-  secondaryColor?: string,
+  secondaryColor?: string
 }
 
 const getDefaultStyle = (visible: boolean): Style => ({
-  display: visible ? 'flex' : 'none'
+  display: visible ? 'flex' : 'none',
 })
 
 export const Plane: FunctionComponent<PlaneProps> = ({
@@ -49,9 +49,13 @@ export const Plane: FunctionComponent<PlaneProps> = ({
   ariaLabel = 'plane-loading',
   wrapperStyle,
   wrapperClass,
-  visible = true
-}): ReactElement => (
-  <div style={{ ...getDefaultStyle(visible), ...wrapperStyle }} className={wrapperClass} data-testid="plane-loading">
+  visible = true,
+}: PlaneProps): ReactElement => (
+  <div
+    style={{ ...getDefaultStyle(visible), ...wrapperStyle }}
+    className={wrapperClass}
+    data-testid="plane-loading"
+  >
     <SVG
       xmlns="http://www.w3.org/2000/svg"
       width="230"

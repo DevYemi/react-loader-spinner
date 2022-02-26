@@ -2,12 +2,12 @@ import React, { FunctionComponent } from 'react'
 import { BaseProps, Style } from '../type'
 
 interface PuffProps extends BaseProps {
-  radius?: string | number,
-  secondaryColor?: string,
+  radius?: string | number
+  secondaryColor?: string
 }
 
 const getDefaultStyle = (visible: boolean): Style => ({
-  display: visible ? 'flex' : 'none'
+  display: visible ? 'flex' : 'none',
 })
 
 export const Puff: FunctionComponent<PuffProps> = ({
@@ -18,9 +18,13 @@ export const Puff: FunctionComponent<PuffProps> = ({
   ariaLabel = 'puff-loading',
   wrapperStyle,
   wrapperClass,
-  visible = true
-}) => (
-  <div style={{ ...getDefaultStyle(visible), ...wrapperStyle }} className={wrapperClass} data-testid="puff-loading">
+  visible = true,
+}: PuffProps) => (
+  <div
+    style={{ ...getDefaultStyle(visible), ...wrapperStyle }}
+    className={wrapperClass}
+    data-testid="puff-loading"
+  >
     <svg
       width={width}
       height={height}

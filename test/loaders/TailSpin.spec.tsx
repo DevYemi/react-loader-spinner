@@ -1,5 +1,5 @@
 import React from 'react'
-import TailSpin from '../../src/loader/TailSpin'
+import { TailSpin } from '../../src/'
 import { render, screen } from '@testing-library/react'
 
 const wrapperTestId = 'tail-spin-loading'
@@ -7,7 +7,9 @@ const svgTestId = 'tail-spin-svg'
 
 describe('Rings Loader', () => {
   test('should be importable correctly', () => {
-    const component = render(<TailSpin height={100} color={'red'} width={100} />)
+    const component = render(
+      <TailSpin height={100} color={'red'} width={100} />
+    )
     expect(component).toBeDefined()
   })
 

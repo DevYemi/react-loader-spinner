@@ -37,11 +37,11 @@ const getPath = (radius: number): string => {
 const getViewBoxSize = (
   strokeWidth: number,
   secondaryStrokeWidth: number,
-  radius: number,
+  radius: number
 ): string => {
   const maxStrokeWidth = Math.max(strokeWidth, secondaryStrokeWidth)
-  const startingPoint = -radius - (maxStrokeWidth / 2) + 1
-  const endpoint = (radius * 2) + maxStrokeWidth
+  const startingPoint = -radius - maxStrokeWidth / 2 + 1
+  const endpoint = radius * 2 + maxStrokeWidth
   return [startingPoint, startingPoint, endpoint, endpoint].join(' ')
 }
 
@@ -56,7 +56,7 @@ const Oval: FunctionComponent<OvalProps> = ({
   visible = true,
   strokeWidth = 2,
   strokeWidthSecondary,
-}): ReactElement => (
+}: OvalProps): ReactElement => (
   <div
     style={{ ...getDefaultStyle(visible), ...wrapperStyle, padding: 3 }}
     className={wrapperClass}
@@ -68,7 +68,7 @@ const Oval: FunctionComponent<OvalProps> = ({
       viewBox={getViewBoxSize(
         Number(strokeWidth),
         Number(strokeWidthSecondary || strokeWidth),
-        RADIUS,
+        RADIUS
       )}
       xmlns="http://www.w3.org/2000/svg"
       stroke={color}

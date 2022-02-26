@@ -2,11 +2,11 @@ import React, { FunctionComponent } from 'react'
 import { BaseProps, Style } from '../type'
 
 interface RingsProps extends BaseProps {
-  radius?: string | number,
+  radius?: string | number
 }
 
 const getDefaultStyle = (visible: boolean): Style => ({
-  display: visible ? 'flex' : 'none'
+  display: visible ? 'flex' : 'none',
 })
 export const Rings: FunctionComponent<RingsProps> = ({
   height = 80,
@@ -16,9 +16,13 @@ export const Rings: FunctionComponent<RingsProps> = ({
   ariaLabel = 'rings-loading',
   wrapperStyle,
   wrapperClass,
-  visible = true
-}) => (
-  <div style={{ ...getDefaultStyle(visible), ...wrapperStyle }} className={wrapperClass} data-testid="rings-loading">
+  visible = true,
+}: RingsProps) => (
+  <div
+    style={{ ...getDefaultStyle(visible), ...wrapperStyle }}
+    className={wrapperClass}
+    data-testid="rings-loading"
+  >
     <svg
       width={width}
       height={height}
@@ -28,7 +32,12 @@ export const Rings: FunctionComponent<RingsProps> = ({
       aria-label={ariaLabel}
       data-testid="rings-svg"
     >
-      <g fill="none" fillRule="evenodd" transform="translate(1 1)" strokeWidth="2">
+      <g
+        fill="none"
+        fillRule="evenodd"
+        transform="translate(1 1)"
+        strokeWidth="2"
+      >
         <circle cx="22" cy="22" r={radius} strokeOpacity="0">
           <animate
             attributeName="r"

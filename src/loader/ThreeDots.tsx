@@ -6,7 +6,7 @@ interface ThreeDotsProps extends BaseProps {
 }
 
 const getDefaultStyle = (visible: boolean): Style => ({
-  display: visible ? 'flex' : 'none'
+  display: visible ? 'flex' : 'none',
 })
 
 const ThreeDots: FunctionComponent<ThreeDotsProps> = ({
@@ -17,8 +17,8 @@ const ThreeDots: FunctionComponent<ThreeDotsProps> = ({
   ariaLabel = 'three-dots-loading',
   wrapperStyle,
   wrapperClass,
-  visible = true
-}) => (
+  visible = true,
+}: ThreeDotsProps): React.ReactElement => (
   <div
     style={{ ...getDefaultStyle(visible), ...wrapperStyle }}
     className={wrapperClass}

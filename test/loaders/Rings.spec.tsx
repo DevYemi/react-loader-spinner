@@ -1,5 +1,5 @@
 import React from 'react'
-import Rings from '../../src/loader/Rings'
+import { Rings } from '../../src'
 import { render, screen } from '@testing-library/react'
 
 const wrapperTestId = 'rings-loading'

@@ -2,11 +2,11 @@ import React, { FunctionComponent } from 'react'
 import { BaseProps, Style } from '../type'
 
 interface WatchProps extends BaseProps {
-  radius?: string | number,
+  radius?: string | number
 }
 
 const getDefaultStyle = (visible: boolean): Style => ({
-  display: visible ? 'flex' : 'none'
+  display: visible ? 'flex' : 'none',
 })
 const Watch: FunctionComponent<WatchProps> = ({
   height = 80,
@@ -16,9 +16,13 @@ const Watch: FunctionComponent<WatchProps> = ({
   ariaLabel = 'watch-loading',
   wrapperStyle,
   wrapperClass,
-  visible = true
-}) => (
-  <div style={{ ...getDefaultStyle(visible), ...wrapperStyle }} className={wrapperClass} data-testid="watch-loading">
+  visible = true,
+}: WatchProps): React.ReactElement => (
+  <div
+    style={{ ...getDefaultStyle(visible), ...wrapperStyle }}
+    className={wrapperClass}
+    data-testid="watch-loading"
+  >
     <svg
       width={width}
       height={height}

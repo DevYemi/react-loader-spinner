@@ -3,11 +3,11 @@ export type Style = {
 }
 
 export interface BaseProps {
-  height?: string | number,
-  width?: string | number,
-  color?: string,
-  ariaLabel?: string,
-  wrapperStyle?: Style,
-  wrapperClass?: string,
+  height?: string | number
+  width?: string | number
+  color?: string
+  ariaLabel?: string
+  wrapperStyle?: Style
+  wrapperClass?: string
   visible?: boolean
 }

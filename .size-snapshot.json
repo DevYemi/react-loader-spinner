@@ -1,0 +1,70 @@
+{
+  "index.cjs.development.js": {
+    "bundled": 67091,
+    "minified": 47133,
+    "gzipped": 7633
+  },
+  "index.cjs.production.js": {
+    "bundled": 67091,
+    "minified": 47133,
+    "gzipped": 7633
+  },
+  "index.esm.js": {
+    "bundled": 61700,
+    "minified": 42509,
+    "gzipped": 7395,
+    "treeshaked": {
+      "rollup": {
+        "code": 4402,
+        "import_statements": 144
+      },
+      "webpack": {
+        "code": 5894
+      }
+    }
+  },
+  "index.umd.development.js": {
+    "bundled": 143692,
+    "minified": 84827,
+    "gzipped": 23965
+  },
+  "index.umd.production.js": {
+    "bundled": 128948,
+    "minified": 77986,
+    "gzipped": 21322
+  },
+  "react-loader-spinner.cjs.development.js": {
+    "bundled": 69328,
+    "minified": 48551,
+    "gzipped": 7866
+  },
+  "react-loader-spinner.cjs.production.js": {
+    "bundled": 69328,
+    "minified": 48551,
+    "gzipped": 7866
+  },
+  "react-loader-spinner.esm.js": {
+    "bundled": 63780,
+    "minified": 43790,
+    "gzipped": 7622,
+    "treeshaked": {
+      "rollup": {
+        "code": 4402,
+        "import_statements": 144
+      },
+      "webpack": {
+        "code": 5894
+      }
+    }
+  },
+  "react-loader-spinner.umd.development.js": {
+    "bundled": 136426,
+    "minified": 82757,
+    "gzipped": 23288
+  },
+  "react-loader-spinner.umd.production.js": {
+    "bundled": 126790,
+    "minified": 76942,
+    "gzipped": 20963
+  }
+}
