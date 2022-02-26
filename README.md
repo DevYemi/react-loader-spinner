@@ -37,9 +37,13 @@ https://codesandbox.io/s/react-loader-spinner-weqls?file=/src/App.js
 
 Import the css to main app.js file
 
-```tsx
-import { Audio } from 'react-loader-spinner'
-;<Audio height="100" width="100" color="grey" ariaLabel="loading" />
+<Audio
+    height="100"
+    width="100"
+    color='grey'
+    ariaLabel='loading'
+  />
+
 ```
 
 ### Types of Spinner
@@ -53,3 +57,4 @@ import { Audio } from 'react-loader-spinner'
 ## License
 
 MIT
+```
