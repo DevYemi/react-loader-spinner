@@ -116,10 +116,6 @@
       "index.d.ts",
       "node_modules/@types"
     ],
-    "plugins": [{
-      "transform": "typescript-plugin-styled-components",
-      "type": "config",
-    }]
   },
   "include": [
     "./src/**/*.tsx",
