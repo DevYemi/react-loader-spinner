@@ -33,7 +33,7 @@
     "clean:doc": "rimraf .docz/",
     "build:doc": "docz build",
     "build:serve:doc": "docz build && docz serve",
-    "deploy:doc": "yarn build:doc && gh-pages -d ./.docz/dist/"
+    "deploy": "yarn build:doc && gh-pages -d ./.docz/dist/"
   },
   "devDependencies": {
     "@types/jest": "^27.0.3",
